@@ -47,6 +47,8 @@ Validate id number and get info about it
 
 ## Notes
 
+The API endpoint was created in a 'piplelined' fashion using express middlewares where the task was divided to several stages and if a stage was successful, data is concatenated to an object in the request and the next middleware is called. If any error occurs in any of the stages, status 400 is sent to the client and no other middlewares are called.
+
 In order to be able to get the person's birth location I had to have a dictionary matching the code in the id to the correponding governorate. I wanted to created a JSON file with the code as key and location as value for easy access. However, copying data manually for 35 locations and having to deal with english and arabic characters was time consuming. So I followed the following steps:
 
 - Copied the list of locations from this article http://www.alsbbora.info/show.aspx?id=404288
