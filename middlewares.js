@@ -21,7 +21,7 @@ exports.isValid = (req, res, next) => {
     let isNumDigits = /^\d+$/.test(id);
 
     if (!isNumDigits) {
-        return sendError(req, res, "Invalid fromat");
+        return sendError(req, res, "Invalid format");
     }
 
     // initialize reponse object
